@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprende Matemáticas - Todos los Niveles</title>
+    <link rel="stylesheet" href="stilos.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Aprende Matemáticas</h1>
+            <p>Elige tu grado académico y empieza a practicar</p>
+        </header>
+
+        <!-- Selección de grado -->
+        <section class="selector">
+            <label for="nivelAprender">Selecciona tu grado:</label>
+            <select id="nivelAprender" onchange="mostrarNivel()">
+                <option value="">-- Selecciona un nivel --</option>
+                <!-- Primaria -->
+                <optgroup label="Primaria">
+                    <option value="primaria1">1° Primaria</option>
+                    <option value="primaria2">2° Primaria</option>
+                    <option value="primaria3">3° Primaria</option>
+                    <option value="primaria4">4° Primaria</option>
+                    <option value="primaria5">5° Primaria</option>
+                    <option value="primaria6">6° Primaria</option>
+                </optgroup>
+                <!-- Secundaria -->
+                <optgroup label="Secundaria">
+                    <option value="secundaria1">1° Secundaria</option>
+                    <option value="secundaria2">2° Secundaria</option>
+                    <option value="secundaria3">3° Secundaria</option>
+                    <option value="secundaria4">4° Secundaria</option>
+                    <option value="secundaria5">5° Secundaria</option>
+                    <option value="secundaria6">6° Secundaria</option>
+                </optgroup>
+            </select>
+        </section>
+
+        <!-- Contenido dinámico -->
+        <section id="contenidoNivel" style="display: none;">
+            <h2 id="tituloNivel"></h2>
+            <p id="descripcionNivel"></p>
+
+            <!-- Ejercicios -->
+            <div class="ejercicios">
+                <h3>Ejercicio</h3>
+                <div class="pregunta">
+                    <span id="pregunta">Aquí aparecerá tu ejercicio</span>
+                </div>
+                <input type="number" id="respuesta" placeholder="Escribe tu respuesta">
+                <button onclick="verificarRespuesta()">Verificar</button>
+                <p id="feedback"></p>
+                <button class="nuevo" onclick="generarEjercicio()">Generar Nuevo Ejercicio</button>
+            </div>
+
+            <!-- Tablas matemáticas -->
+            <div class="tablas">
+                <h3>Tablas Matemáticas</h3>
+                <div class="tabla-container">
+                    <button onclick="mostrarTabla('suma')">Tabla de Sumar</button>
+                    <button onclick="mostrarTabla('resta')">Tabla de Restar</button>
+                    <button onclick="mostrarTabla('multiplicar')">Tabla de Multiplicar</button>
+                    <button onclick="mostrarTabla('dividir')">Tabla de Dividir</button>
+                    <button onclick="mostrarTabla('raiz')">Raíces Cuadradas</button>
+                </div>
+                <div id="tabla" class="tabla-matematica"></div>
+            </div>
+
+            <!-- Preguntas educativas -->
+            <div class="preguntas-educativas">
+                <h3>Preguntas Educativas</h3>
+                <div class="pregunta">
+                    <span id="preguntaEducativa">Aquí aparecerá una pregunta educativa.</span>
+                </div>
+                <input type="text" id="respuestaEducativa" placeholder="Escribe tu respuesta">
+                <button onclick="verificarPreguntaEducativa()">Verificar</button>
+                <p id="feedbackEducativo"></p>
+                <button class="nuevo" onclick="generarPreguntaEducativa()">Nueva Pregunta</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+/* Diseño General */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ34qOk48EyPUhfKU5Q59W0lF67HyP80it-Bg&s'); /* Agrega la URL de la imagen de fondo */
+    background-size: cover;
+    background-position: center center;
+    color: #f5ebeb;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 10px 0 0;
+}
+
+/* Selector de grado */
+.selector {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.selector select {
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Contenido dinámico */
+#contenidoNivel {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#contenidoNivel h2 {
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+.ejercicios, .tablas, .preguntas-educativas {
+    margin-top: 20px;
+}
+
+.ejercicios h3, .tablas h3, .preguntas-educativas h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #fff;
+    display: inline-block;
+}
+
+.pregunta {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+input[type="number"], input[type="text"] {
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: calc(100% - 22px);
+    max-width: 400px;
+    margin-bottom: 10px;
+}
+
+button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #388E3C;
+}
+
+.nuevo {
+    background-color: #FFC107;
+    color: #333;
+}
+
+.nuevo:hover {
+    background-color: #FFA000;
+}
+
+/* Tablas matemáticas */
+.tabla-matematica {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.tabla-matematica table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-matematica td {
+    padding: 8px;
+    text-align: center;
+    background: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+.tabla-container button {
+    margin: 5px;
+}
+
+/* Feedback */
+#feedback, #feedbackEducativo {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#feedback {
+    color: #FFC107;
+}
+
+#feedbackEducativo {
+    color: #FFC107;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .selector select {
+        width: 100%;
+    }
+
+    input[type="number"], input[type="text"] {
+        width: 100%;
+    }
+}
